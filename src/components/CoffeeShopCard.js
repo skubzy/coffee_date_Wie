@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/CoffeeShopCard.css';
+import "../styles/CoffeeShopCard.css";
 
 function CoffeeShopCard({ name, rating, reviews, distance, tags, onSuggest }) {
   return (
@@ -15,10 +15,16 @@ function CoffeeShopCard({ name, rating, reviews, distance, tags, onSuggest }) {
       <p className="distance">{distance} away</p>
       <div className="tags">
         {tags.map((tag, idx) => (
-          <span key={idx} className="tag">{tag}</span>
+          <span key={idx} className="tag">
+            {tag}
+          </span>
         ))}
       </div>
-      <button className="suggest-btn" onClick={onSuggest}>
+      <button
+        type="button"    
+        className="suggest-btn"
+        onClick={onSuggest}
+      >
         Suggest this place
       </button>
     </div>

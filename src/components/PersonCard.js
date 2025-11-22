@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/PersonCard.css';
+import "../styles/PersonCard.css";
 
 function PersonCard({ name, drink, location, note, onInvite }) {
   return (
@@ -8,7 +8,11 @@ function PersonCard({ name, drink, location, note, onInvite }) {
       <p className="drink">{drink}</p>
       <p className="location">{location}</p>
       <p className="note">{note}</p>
-      <button className="invite-btn" onClick={onInvite}>
+      <button
+        type="button"        
+        className="invite-btn"
+        onClick={onInvite}
+      >
         Send Coffee Invite
       </button>
     </div>
