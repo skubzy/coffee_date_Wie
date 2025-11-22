@@ -1,42 +1,252 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.App {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App-logo {
+  height: 30vmin;
+  width: 30vmin;
+  pointer-events: none;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .App-logo {
+    animation: App-logo-bounce 4s ease-in-out infinite;
   }
 }
 
-.card {
-  padding: 2em;
+@keyframes App-logo-bounce {
+  /* Left, low */
+  0% {
+    transform: translate(-40px, 0);
+  }
+
+  /* Middle, high (arc peak) */
+  25% {
+    transform: translate(0, -30px);
+  }
+
+  /* Right, low */
+  50% {
+    transform: translate(40px, 0);
+  }
+
+  /* Middle, high again on the way back */
+  75% {
+    transform: translate(0, -30px);
+  }
+
+  /* Back to left, low */
+  100% {
+    transform: translate(-40px, 0);
+  }
 }
 
-.read-the-docs {
-  color: #888;
+.App-header {
+  background-color: #c76e25;
+  padding: 0px 0;
+  padding-left: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-style: italic;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.Coffee.Dates {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section - Header + Location (Full Screen) */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Location Section */
+.location-section {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #faf8f3, #fff5f0);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.location-title {
+  font-size: 28px;
+  color: #5c3d2e;
+  margin: 0 0 25px 0;
+  font-weight: 600;
+}
+
+.location-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #6b4423;
+  padding-right: 70px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.location-btn:hover {
+  background: #5a3a1b;
+  transform: translateY(-2px);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #d4c5b9;
+  border-radius: 20px;
+  font-size: 14px;
+  background: white;
+  color: #5c3d2e;
+  transition: border-color 0.3s;
+}
+
+.search-input::placeholder {
+  color: #a8a8a8;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #6b4423;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: transform 0.2s;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Coffee Shops Section - Full Screen */
+.coffee-shops-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #faf8f3;
+}
+
+.coffee-shops-section h2 {
+  font-size: 32px;
+  color: #5c3d2e;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.coffee-shops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* People Section - Full Screen */
+.people-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #fff5f0;
+}
+
+.people-section h2 {
+  font-size: 32px;
+  color: #5c3d2e;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .header-wrapper {
+    min-height: auto;
+  }
+
+  .coffee-shops-section,
+  .people-section {
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .coffee-shops-section h2,
+  .people-section h2 {
+    font-size: 24px;
+  }
+
+  .coffee-shops-grid,
+  .people-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .search-form {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+  }
 }

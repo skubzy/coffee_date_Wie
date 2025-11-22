@@ -1,0 +1,71 @@
+.header-container {
+  background: linear-gradient(135deg, #faf8f3 0%, #fff5f0 100%);
+  padding: 60px 20px 40px;
+  text-align: center;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+
+.header-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header-auth-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  color: #5c3d2e;
+  font-size: 18px;
+}
+
+.header-auth-btn:hover {
+  background: rgba(107,68,35,0.06);
+}
+
+.auth-icon {
+  display: inline-block;
+  transform: translateY(2px);
+}
+
+@media (max-width: 640px) {
+  .header-auth-btn {
+    top: 12px;
+    right: 12px;
+    font-size: 16px;
+  }
+}
+
+.header-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  font-size: 52px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #5c3d2e;
+  margin: 15px 0;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.header-subtitle {
+  font-size: 16px;
+  color: #8b6f47;
+  margin: 15px 0 0 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.6;
+}

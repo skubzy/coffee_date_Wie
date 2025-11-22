@@ -1,0 +1,86 @@
+.coffee-card {
+  background: #faf8f3;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.coffee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.shop-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #5c3d2e;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  color: #f59e0b;
+  font-size: 14px;
+}
+
+.rating-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #5c3d2e;
+}
+
+.review-count {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.distance {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.tag {
+  background: #e8dcc8;
+  color: #5c3d2e;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+}
+
+.suggest-btn {
+  width: 100%;
+  padding: 10px;
+  background: #a8675f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.suggest-btn:hover {
+  background: #926050;
+}

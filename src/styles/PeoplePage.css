@@ -1,0 +1,196 @@
+.people-page {
+  background: #faf8f3;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.people-header {
+  background: #fff5f0;
+  padding: 20px;
+  border-bottom: 1px solid #e8dcc8;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-top h1 {
+  font-size: 24px;
+  color: #5c3d2e;
+  margin: 0;
+  font-weight: 600;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.people-tabs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 5px 0;
+}
+
+.people-tab {
+  white-space: nowrap;
+  padding: 8px 14px;
+  background: #f5ede0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #5c3d2e;
+  transition: background 0.3s;
+}
+
+.people-tab.active {
+  background: #d4c5b9;
+  font-weight: 600;
+}
+
+.people-tab:hover {
+  background: #d4c5b9;
+}
+
+.people-list {
+  padding: 20px;
+}
+
+.person-card {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e8dcc8;
+  align-items: center;
+}
+
+.person-avatar {
+  width: 60px;
+  height: 60px;
+  background: #e8dcc8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.status-indicator {
+  width: 14px;
+  height: 14px;
+  background: #4ade80;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.status-indicator.offline {
+  background: #d1d5db;
+}
+
+.person-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.person-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.person-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #5c3d2e;
+}
+
+.heart-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #d4c5b9;
+  transition: color 0.3s;
+  flex-shrink: 0;
+}
+
+.heart-btn.liked {
+  color: #c76e25;
+}
+
+.person-drink {
+  font-size: 13px;
+  color: #a8a8a8;
+  margin: 3px 0;
+}
+
+.person-location {
+  font-size: 12px;
+  color: #a8a8a8;
+  margin: 2px 0;
+}
+
+.person-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.message-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background: #6b4423;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.message-btn:hover {
+  background: #5c3d2e;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+  .people-header {
+    position: sticky;
+  }
+
+  .person-card {
+    gap: 12px;
+  }
+
+  .person-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .message-btn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
